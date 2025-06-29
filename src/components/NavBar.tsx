@@ -16,7 +16,7 @@ export function NavBar() {
                     </span>
                     <Badge variant={"outline"} className="h-5 mt-2">v1.0</Badge>
                 </div>
-                <div className="flex px-10">
+                <div className="flex px-5 md:px-10">
                     <ModeToggle />
 
                 </div>

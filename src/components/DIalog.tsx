@@ -10,7 +10,7 @@ import {
 import { Button } from "./ui/button"
 import { DialogClose } from "@radix-ui/react-dialog"
 
-export function DialogDelete({ clear }) {
+export function DialogDelete({ clear }: { clear: () => void }) {
     return (<>
         <Dialog>
             <DialogTrigger>
@@ -25,8 +25,7 @@ export function DialogDelete({ clear }) {
                 </DialogHeader>
                 <DialogFooter>
                     <DialogClose>
-
-                        <Button className="" variant={"default"}>Cancel</Button>
+                        <Button className="w-full" variant={"secondary"}>Cancel</Button>
                     </DialogClose>
                     <Button onClick={clear} variant={"destructive"}>Delete</Button>
                 </DialogFooter>

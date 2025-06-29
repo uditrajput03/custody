@@ -12,8 +12,8 @@ import { WalletMain } from './WalletMain'
 
 function App() {
   // const [choose, setChoose] = useState(false)
-  const [type, setType] = useState()
-  const [phrase, setPhrase] = useState([])
+  const [type, setType] = useState<string>()
+  const [phrase, setPhrase] = useState<string[]>([])
   const clearWallet = () => {
     setType("")
     setPhrase([])
@@ -35,7 +35,7 @@ function App() {
               {
                 (type && phrase.length==0) &&
                 <AnimationWrap>
-                  <Generate type={type} setPhrase={setPhrase}/>
+                  <Generate setPhrase={setPhrase}/>
                 </AnimationWrap>
               }
               {
